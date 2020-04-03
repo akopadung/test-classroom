@@ -32,21 +32,16 @@ export default class About extends Component {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="colorlib-about">
-          <div className="colorlib-narrow-content">
             <div className="row">
               <div
                 className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
                 data-animate-effect="fadeInLeft"
               >
-                <span className="heading-meta">ข้อมูล</span>
-                <h2 className="colorlib-heading">การศึกษาและความสนใจ</h2>
+                <h2 className="colorlib-heading">ข้อมูลทั่วไป</h2>
               </div>
             </div>
             <div className="row row-pt-md">
-              <div className="col-md-4 text-center animate-box">
+              <div className="col-md-6 text-center animate-box">
                 <div className="services color-1">
                   <span className="icon">
                     <i className="icon-bulb" />
@@ -111,8 +106,6 @@ export default class About extends Component {
                     </table>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4 text-center animate-box">
                 <div className="services color-3">
                   <span className="icon">
                     <i className="icon-phone3" />
@@ -155,19 +148,8 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 text-center animate-box">
-                <div className="services color-5">
-                  <span className="icon">
-                    <i className="icon-data" />
-                  </span>
-                  <div className="desc">
-                    <h3>การพัฒนาวิชาชีพ</h3>
-                    <p>
-                      ใบอนุญาตผู้ประกอบวิชาชีพครู
-                      <br></br>เลขที่ 610109000420078
-                    </p>
-                  </div>
-                </div>
+              <div className="col-md-6 text-center animate-box">
+                
               </div>
               <div className="col-md-4 text-center animate-box">
                 <div className="services color-2">

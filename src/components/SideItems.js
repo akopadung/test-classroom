@@ -20,6 +20,9 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
     }
     if (onClickProp) {
       onClickProp(e, item);
+      if(item.name === 'home'){
+        document.getElementById('home').click();
+      }
     }
   }
 
@@ -74,11 +77,24 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
           </List>
         ) : null}
       </Collapse>
+     <nav id="colorlib-main-menu" role="navigation" className="navbar" style={{display:'none'}}>
+              <div id="navbar" className="collapse">
+                <ul>
+                  <li className="active"><a href="#home" data-nav-section="home" id="home">ทำความรู้จัก</a></li>
+                  <li><a href="#about" data-nav-section="about">ข้อมูลทั่วไป</a></li>
+                  <li><a href="#" data-nav-section="projects">Projects</a></li>
+                  <li><a href="#" data-nav-section="blog">Blog</a></li>
+                  <li><a href="#timeline" data-nav-section="timeline">การปฏิบัติงาน</a></li>
+                 
+                </ul>
+              </div>
+            </nav>
     </>
   );
 }
 
 function SideItems({ items, depthStep, depth, expanded }) {
+
   return (
       <div className="sidebar">
         <List disablePadding dense>

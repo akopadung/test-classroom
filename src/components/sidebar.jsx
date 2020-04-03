@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import profile__image from './images/about.jpg'
-import Timeline from "./timeline"
 import SideItems from "./SideItems"
 import HomeIcon from "@material-ui/icons/Home";
 import ReceiptIcon from "@material-ui/icons/Receipt";
@@ -9,21 +8,53 @@ import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
 import SettingsIcon from "@material-ui/icons/Settings";
 
 function onClick(e, item) {
-  window.alert(JSON.stringify(item, null, 2));
-  console.log(item);
+  //window.alert(JSON.stringify(item, null, 2));
+  //console.log(item);
 }
-
-const items = [
-  { name: "home", label: "Home", Icon: HomeIcon },
+ 
+const items = [ 
+  { name: "home", label: "หน้าแรก", Icon: HomeIcon, onClick},
   {
-    name: "billing",
-    label: "Billing",
+    name: "activity",
+    label: "แฟ้มสะสมผลงาน",
     Icon: ReceiptIcon,
     items: [
-      { name: "statements", label: "Statements", onClick },
-      { name: "reports", label: "Reports", onClick }
+      { name: "order", label: "คำสั่งปฏิบัติงาน", onClick },
+      { name: "award", label: "ผลงานและเกียรติบัตร", onClick },
+      { name: "timeline", label: "กิจกรรมที่เข้าร่วม", onClick },
+      { name: "plc", label: "ชุมชนการเรียนรู้ (PLC)", onClick }
     ]
   },
+  {
+    name: "lms",
+    label: "การจัดการเรียนรู้",
+    Icon: ReceiptIcon,
+    items: [
+      { name: "11", label: "1.1 การสร้างและหรือพัฒนาหลักสูตร", onClick },
+      { name: "12", label: "1.2 การออกแบบหน่วยการเรียนรู้", onClick },
+      { name: "13", label: "1.3 การสร้างและการพัฒนาสื่อฯ", onClick },
+      { name: "14", label: "1.4 การวัดและประเมินผลการเรียนรู้", onClick },
+      { name: "15", label: "1.5 การวิจัยเพื่อพัฒนาการเรียนรู้", onClick }
+    ]
+  },{
+    name: "cms",
+    label: "การบริหารจัดการชั้นเรียน",
+    Icon: ReceiptIcon,
+    items: [
+      { name: "21", label: "2.1 การบริหารจัดการชั้นเรียน", onClick },
+      { name: "22", label: "2.2 การจัดระบบดูแลช่วยเหลือผู้เรียน", onClick },
+      { name: "23", label: "2.3 การจัดทำข้อมูลสารสนเทศ", onClick }
+    ]
+  },
+  {
+    name: "development",
+    label: "การอบรมและพัฒนา",
+    Icon: ReceiptIcon,
+    items: [
+      { name: "self", label: "การพัฒนาตนเอง", onClick },
+      { name: "career", label: "การพัฒนาวิชาชีพ", onClick }
+    ]
+  }/*,
   "divider",
   {
     name: "settings",
@@ -52,7 +83,7 @@ const items = [
         ]
       }
     ]
-  }
+  }*/
 ];
 
 export default class Sidebar extends Component {
@@ -64,27 +95,19 @@ export default class Sidebar extends Component {
         <div>
           <nav href="#navbar" className="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i /></nav>
           <aside id="colorlib-aside" className="border js-fullheight">
-            <SideItems items={items} ></SideItems>
             <div className="text-center">
               <div className="author-img" style={{backgroundImage: `url(${profile__image})`}}/>
-              <h2 id="colorlib-logo"><a href="index.html">นายอนุรักษ์ โคผดุง</a></h2>
-              <h3 id="colorlib-logo-15">Anurak Khophadung</h3>
+              <h3 id="colorlib-logo" style={{marginTop:'-20px'}} ><a hhref="#home" data-nav-section="home">นายอนุรักษ์ โคผดุง</a></h3>
+              <h3 id="colorlib-logo-15" style={{marginTop:'-5px'}} >Anurak Khophadung</h3>
               <h3 id="colorlib-logo-10" style={{fontSize:8}}>กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี โรงเรียนภูเขียว</h3>
               <span className="email"><i className="icon-mail"></i> anurak.k@phukhieo.ac.th</span>
             </div>
-            <br></br>
-            <nav id="colorlib-main-menu" role="navigation" className="navbar">
-              <div id="navbar" className="collapse">
-                <ul>
-                  <li className="active"><a href="#home" data-nav-section="home">ทำความรู้จัก</a></li>
-                  <li><a href="#about" data-nav-section="about">ข้อมูลทั่วไป</a></li>
-                  {/*<li><a href="#" data-nav-section="projects">Projects</a></li>
-                  <li><a href="#" data-nav-section="blog">Blog</a></li>*/}
-                  <li><a href="#timeline" data-nav-section="timeline">การปฏิบัติงาน</a></li>
-                 
-                </ul>
-              </div>
-            </nav>
+            <SideItems items={items} ></SideItems>
+            <div className="colorlib-footer" style={{position: 'relative',
+  bottom: 0,
+  width: '100%',
+  height: '2.5rem',
+  marginTop:'10px' }}>
             <nav id="colorlib-main-menu" >
               <ul>
                 <li><a href="#home" target="_blank" rel="noopener noreferrer"><i className="icon-facebook2" /></a>
@@ -95,12 +118,12 @@ export default class Sidebar extends Component {
                 <a href="#home" target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
               </ul>
             </nav>
-            <div className="colorlib-footer">
-              <p><small style={{fontSize: '8px'}}>
+              <p style={{marginTop:"-10px"}}><small style={{fontSize: '10px'}}>
                   Thanks <a href="https://www.freecodecamp.org/news/portfolio-app-using-react-618814e35843/" target="_blank" rel="noopener noreferrer">Dhruv </a>
                   and <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a> for inspiration 
               </small></p>
             </div>
+            
           </aside>
         </div>
       </div>
