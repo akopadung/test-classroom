@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/test-classroom/static/css/main.563b42bf.chunk.css",
+    "main.js": "/test-classroom/static/js/main.9a9cee4c.chunk.js",
+    "main.js.map": "/test-classroom/static/js/main.9a9cee4c.chunk.js.map",
+    "runtime-main.js": "/test-classroom/static/js/runtime-main.21ab2fd6.js",
+    "runtime-main.js.map": "/test-classroom/static/js/runtime-main.21ab2fd6.js.map",
+    "static/js/2.d8bf0f94.chunk.js": "/test-classroom/static/js/2.d8bf0f94.chunk.js",
+    "static/js/2.d8bf0f94.chunk.js.map": "/test-classroom/static/js/2.d8bf0f94.chunk.js.map",
+    "index.html": "/test-classroom/index.html",
+    "precache-manifest.3121794d6ce58ba42d3e3694d3de0275.js": "/test-classroom/precache-manifest.3121794d6ce58ba42d3e3694d3de0275.js",
+    "service-worker.js": "/test-classroom/service-worker.js",
+    "static/css/main.563b42bf.chunk.css.map": "/test-classroom/static/css/main.563b42bf.chunk.css.map",
+    "static/js/2.d8bf0f94.chunk.js.LICENSE.txt": "/test-classroom/static/js/2.d8bf0f94.chunk.js.LICENSE.txt",
+    "static/media/about.jpg": "/test-classroom/static/media/about.8eaa53ab.jpg",
+    "static/media/img_bg_slide0.jpg": "/test-classroom/static/media/img_bg_slide0.fb95d713.jpg",
+    "static/media/img_bg_slide_1.JPG": "/test-classroom/static/media/img_bg_slide_1.2e01b436.JPG",
+    "static/media/img_bg_slide_2.jpg": "/test-classroom/static/media/img_bg_slide_2.5bbce33e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21ab2fd6.js",
+    "static/js/2.d8bf0f94.chunk.js",
+    "static/css/main.563b42bf.chunk.css",
+    "static/js/main.9a9cee4c.chunk.js"
+  ]
+}
